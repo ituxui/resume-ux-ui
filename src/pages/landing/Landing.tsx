@@ -36,7 +36,7 @@ export const Landing = () => {
             <Badge href='xreider@yandex.ru' />
             <Badge
               text="PDF"
-              href="/resume.pdf" // Путь к файлу в папке public
+              href="/https resume-ux-ui.vercel.app.pdf" // Путь к файлу в папке public
               download={true} // Указываем, что нужно скачать файл
             />
           </div>
@@ -445,7 +445,7 @@ export const Landing = () => {
               <Badge href='xreider@yandex.ru' />
               <Badge
                 text="PDF"
-                href="/resume.pdf" // Путь к файлу в папке public
+                href="/https resume-ux-ui.vercel.app.pdf" // Путь к файлу в папке public
                 download={true} // Указываем, что нужно скачать файл
               />
             </div>
