@@ -2,19 +2,22 @@ import React, { useState, useEffect, useRef, type ImgHTMLAttributes } from 'reac
 import styles from './SoloImage.module.scss';
 import classNames from 'classnames';
 import { useScrollLock } from '@shared/hooks';
+import { useNavigate } from 'react-router';
 
 type PropType = {
   mode?: 'fullWidth' | 'mobileScreens';
+  navigateTo?: string;
 } & ImgHTMLAttributes<HTMLImageElement>;
 
 export const SoloImage: React.FC<PropType> = (props) => {
-  const { mode = 'fullWidth', ...others } = props;
+  const { mode = 'fullWidth', navigateTo, ...others } = props;
   const [isFullView, setIsFullView] = useState(false);
   const [isCentered, setIsCentered] = useState(false);
   // 👇 Добавляем состояние для размеров
   const [originalSize, setOriginalSize] = useState({ width: 0, height: 0 });
   const wrapperRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
+  const navigate = useNavigate();
 
   useScrollLock(isFullView);
 
@@ -62,6 +65,9 @@ export const SoloImage: React.FC<PropType> = (props) => {
           [styles.centered]: isCentered,
         })}
         onClick={() => {
+          if (navigateTo) {
+            navigate(navigateTo)
+          }
           if (isFullView) {
             setIsFullView(false);
           }

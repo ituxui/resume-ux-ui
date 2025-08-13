@@ -24,7 +24,7 @@ export const listOfCompletedProjects: TimelineItemData[] = [
       </InfoItem>
 
       <Section sublevel={1}>
-        <SoloImage src='images/landing/uip1.jpeg' alt='Проект УИП' />
+        <SoloImage src='images/landing/uip1.jpeg' navigateTo={routeMap.uip} alt='Проект УИП' />
       </Section>
     </>,
     status: 'completed',
@@ -41,7 +41,7 @@ export const listOfCompletedProjects: TimelineItemData[] = [
       </InfoItem>
 
       <Section sublevel={1}>
-        <SoloImage src='images/landing/tsd1.jpeg' alt='Проект УИП' />
+        <SoloImage src='images/landing/tsd1.jpeg' navigateTo={routeMap.tsd} alt='Проект УИП' />
       </Section>
     </>,
     status: 'completed',
@@ -66,7 +66,7 @@ export const listOfCompletedProjects: TimelineItemData[] = [
       </InfoItem>
 
       <Section sublevel={1}>
-        <SoloImage src='images/landing/dvipraz1.jpg' alt='Проект УИП' />
+        <SoloImage src='images/landing/dvipraz1.jpg' navigateTo={routeMap.dvipraz} alt='Проект УИП' />
       </Section>
     </>,
     status: 'completed',
@@ -90,7 +90,7 @@ export const listOfCompletedProjects: TimelineItemData[] = [
       </InfoItem>
 
       <Section sublevel={1}>
-        <SoloImage src='images/landing/rdp1.png' alt='Проект УИП' />
+        <SoloImage src='images/landing/rdp1.png' navigateTo={routeMap.rdpLanding} alt='Проект УИП' />
       </Section>
     </>,
     status: 'completed',
@@ -107,7 +107,7 @@ export const listOfCompletedProjects: TimelineItemData[] = [
       </InfoItem>
 
       <Section sublevel={1}>
-        <SoloImage src='images/landing/dostav1.jpg' alt='Проект УИП' />
+        <SoloImage src='images/landing/dostav1.jpg' navigateTo={routeMap.dostav} alt='Проект УИП' />
       </Section>
     </>,
     status: 'completed',
@@ -128,7 +128,7 @@ export const listOfCompletedProjects: TimelineItemData[] = [
       </InfoItem>
 
       <Section sublevel={1}>
-        <SoloImage src='images/landing/aeroakt1.jpg' alt='Проект Аэроакт' />
+        <SoloImage src='images/landing/aeroakt1.jpg' navigateTo={routeMap.aeroakt} alt='Проект Аэроакт' />
       </Section>
     </>,
     status: 'completed',
