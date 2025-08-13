@@ -3,7 +3,6 @@
   text-decoration: none; // Remove default underline
   cursor: pointer;
   transition: color 50ms ease-in-out, text-decoration 50ms ease-in-out;
-  text-decoration: underline;
 
   color: var(--color_text-accent_default--enabled);
 
@@ -11,6 +10,10 @@
     outline: 2px solid var(--color_text-accent_high--enabled); // Simple focus indicator
     outline-offset: 2px;
   }
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 // Accent styles

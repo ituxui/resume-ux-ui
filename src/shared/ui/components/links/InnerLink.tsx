@@ -12,9 +12,16 @@ interface InnerLinkProps extends LinkProps {
   children: ReactNode;
   accent?: LinkAccent; // Необязательное свойство accent, по умолчанию 'default'
   className?: string;
+  underline?: boolean;
 }
 
-export const InnerLink: FC<InnerLinkProps> = ({ accent, children, className, to, ...props }) => {
+export const InnerLink: FC<InnerLinkProps> = ({
+  accent,
+  children,
+  className,
+  to,
+  underline = true,
+  ...props }) => {
 
   return (
     <Link
@@ -27,6 +34,7 @@ export const InnerLink: FC<InnerLinkProps> = ({ accent, children, className, to,
         styles.link,
         styles[`accent_${accent}`], // Применяем стили в зависимости от значения accent
         className,
+        underline && styles.underline,
       )}
       {...props}
     >

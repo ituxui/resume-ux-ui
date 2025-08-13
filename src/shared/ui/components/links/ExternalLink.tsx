@@ -8,6 +8,7 @@ interface ExternalLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string; // Обязательный href
   accent?: LinkAccent; // Необязательное свойство accent, по умолчанию 'default'
   children: React.ReactNode; // Содержимое ссылки
+  underline?: boolean;
 }
 
 export const ExternalLink: FC<ExternalLinkProps> = ({
@@ -15,6 +16,7 @@ export const ExternalLink: FC<ExternalLinkProps> = ({
   accent = 'default', // Устанавливаем 'default' как значение по умолчанию
   children,
   className,
+  underline = true,
   ...rest
 }) => {
 
@@ -36,6 +38,7 @@ export const ExternalLink: FC<ExternalLinkProps> = ({
         styles.link,
         styles[`accent_${accent}`], // Применяем стили в зависимости от значения accent
         className,
+        underline && styles.underline,
       )}
       onClick={handleClick} // Добавляем новый обработчик
       {...rest} // Передаем все остальные HTML-атрибуты тега <a>

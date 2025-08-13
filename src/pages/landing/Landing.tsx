@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import Styles from './Landing.module.scss';
 import { AnimatedBubble, Bento, BrandIcon, ExternalLink, FeatureLargeImageCard, FlexHeight1, Section, Timeline } from '@shared/ui';
 import { Heading } from '@shared/ui/assets/Heading/Heading';
-import Hello from './assets/hello.svg?react';
 import CommonStyles from '@commonStyles/CommonStyles.module.scss'
 import { Badge, } from '@shared/ui';
 import {
@@ -29,8 +28,6 @@ export const Landing = () => {
         <Section className={Styles.headingContainer}>
           <Heading size={0} className={classNames(Styles.heading)}>
             Привет! Я Юрий
-
-            <Hello className={Styles.helloSvg} />
           </Heading>
 
           <div className={Styles.links}>
@@ -45,7 +42,7 @@ export const Landing = () => {
           </div>
 
           <Heading size={3} kind='thin' className={classNames(Styles.description, CommonStyles.muted)}>
-            UX UI дизайнер с профессиональным опытом <em><WorkDuration /></em> в <ExternalLink href='https://www.rusprofile.ru/id/1237700454045'>ООО «4А»</ExternalLink> и <em className={CommonStyles.nowrap}>T-shaped</em> знаниями фуллстек программирования. Реализовал 9 многостраничных приложений. <em>Ищу удаленную позицию</em> в продуктовой компании, использующую лучшие практики, чтобы применить и углубить экспертизу.<br />Давайте поговорим о Вашем продукте!
+            UX UI дизайнер с профессиональным опытом <em><WorkDuration /></em> и <em className={CommonStyles.nowrap}>T-shaped</em> знаниями фуллстек программирования. Реализовал 9 многостраничных приложений. <em>Ищу удаленную позицию</em> в продуктовой компании, использующую лучшие практики, чтобы применить и углубить экспертизу.<br />Давайте поговорим о Вашем продукте!
           </Heading>
 
           <div className={Styles.avaContainer}>
@@ -383,7 +380,7 @@ export const Landing = () => {
                 </Bento.Header>
                 <FlexHeight1 />
                 <Bento.Section className={classNames(Styles.second_bento_education_section, CommonStyles.muted)}>
-                  <em>2006-2012 гг.</em> — <ExternalLink href='https://ru.wikipedia.org/wiki/Педагогический_институт_ТОГУ'>Педагогический Институт Тихоокеанского Государственного Университета ↗</ExternalLink>, Факультет востоковедения и истории, переводчик-лингвист китайского и английского языков
+                  <em>2006-2012 гг.</em> — <ExternalLink underline={false} href='https://ru.wikipedia.org/wiki/Педагогический_институт_ТОГУ'>Педагогический Институт Тихоокеанского Государственного Университета ↗</ExternalLink>, Факультет востоковедения и истории, переводчик-лингвист китайского и английского языков
                 </Bento.Section>
               </Bento.Item>
 

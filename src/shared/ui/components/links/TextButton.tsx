@@ -7,12 +7,14 @@ import type { LinkAccent } from './links.types';
 interface TextButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   accent?: LinkAccent; // Необязательное свойство accent, по умолчанию 'default'
   children: React.ReactNode; // Содержимое ссылки
+  underline?: boolean;
 }
 
 export const TextButton: FC<TextButtonProps> = ({
   accent = 'default', // Устанавливаем 'default' как значение по умолчанию
   children,
   className,
+  underline = true,
   ...rest
 }) => {
 
@@ -22,6 +24,7 @@ export const TextButton: FC<TextButtonProps> = ({
       className={classNames(
         styles.link,
         styles[`accent_${accent}`], // Применяем стили в зависимости от значения accent
+        underline && styles.underline,
         className,
       )}
       {...rest} // Передаем все остальные HTML-атрибуты тега <button>
