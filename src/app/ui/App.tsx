@@ -1,18 +1,16 @@
 import { Outlet, ScrollRestoration, } from 'react-router';
-import Styles from './App.module.scss';
 import { PageModal } from '@pages';
+import { StyleLoader } from './wrappers/StyleLoader';
+import { useBodyBackground } from './hooks/useBodyBackground';
 
 export function App() {
-
+  useBodyBackground();
   return (
-    <>
-      <div className={Styles.wrapper}>
-        <Outlet />
-      </div>
+    <StyleLoader>
+      <Outlet />
       <ScrollRestoration />
-
       <PageModal.Portal />
-    </>
+    </StyleLoader>
   )
 }
 
