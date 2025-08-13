@@ -1,16 +1,16 @@
 import { Outlet, ScrollRestoration, } from 'react-router';
 import { PageModal } from '@pages';
-import { StyleLoader } from './wrappers/StyleLoader';
+import { WaitAppLoad } from './wrappers/WaitAppLoad';
 import { useBodyBackground } from './hooks/useBodyBackground';
 
 export function App() {
   useBodyBackground();
   return (
-    <StyleLoader>
+    <WaitAppLoad>
       <Outlet />
       <ScrollRestoration />
       <PageModal.Portal />
-    </StyleLoader>
+    </WaitAppLoad>
   )
 }
 
