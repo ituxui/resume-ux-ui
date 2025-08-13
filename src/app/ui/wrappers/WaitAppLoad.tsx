@@ -36,7 +36,7 @@ export const WaitAppLoad: FC<WaitAppLoadProps> = ({ children }) => {
   if (!isLoaded) {
     // Показываем прелоадер, пока ресурсы не загружены
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', fontSize: '32px', fontWeight: 'bold' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', fontSize: '32px', fontWeight: 'bold !important' }}>
         Привет, Мир!
       </div>
     );
