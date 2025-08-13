@@ -31,7 +31,8 @@
 
   .avaContainer {
     grid-area: image;
-    max-width: 200px;
+    width: 200px;
+    max-width: 100%;
     overflow: hidden;
     border-radius: 32px;
     align-self: flex-start;
