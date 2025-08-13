@@ -30,7 +30,7 @@ export const listOfCompletedProjects: TimelineItemData[] = [
     status: 'completed',
   },
   {
-    title: 'Приложение для терминала сбора данных для завода по заправке балонов →',
+    title: 'Приложение для терминала сбора данных для завода по заправке баллонов →',
     innerLink: routeMap.tsd,
     description: <>
       <InfoItem heading='Компания'>(NDA)</InfoItem>

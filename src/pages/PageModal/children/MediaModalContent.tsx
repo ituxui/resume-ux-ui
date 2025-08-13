@@ -74,7 +74,7 @@ export const MediaModalContent = () => (
 
 // <Section sublevel={1}>
 //   <Heading size={4}>Fullstack</Heading>
-//   <div className={CommonStyles.muted}>Источники для изучения фуллстек разработки.</div>
+//   <div className={CommonStyles.muted}>Источники для изучения фулстек разработки.</div>
 //   <div>
 //     <ExternalLink href='https://www.youtube.com/@codewithantonio' accent='high'>Code With Antonio</ExternalLink>,{' '}
 //     <ExternalLink href='https://www.youtube.com/@javascriptmastery/featured' accent='high'>JavaScript Mastery</ExternalLink>,{' '}

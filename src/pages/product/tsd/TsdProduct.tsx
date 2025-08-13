@@ -356,7 +356,7 @@ export const TsdProduct = () => {
       </Section>
 
       <Section sublevel={0}>
-        <FooterNavigation current="Приложение для терминала сбора данных для завода по заправке балонов" />
+        <FooterNavigation current="Приложение для терминала сбора данных для завода по заправке баллонов" />
       </Section>
     </>
   );

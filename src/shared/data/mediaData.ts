@@ -208,7 +208,7 @@ export const mediaData: TypeObserveCardsArray = [
   },
   {
     heading: 'Fullstack',
-    description: 'Источники для изучения фуллстек разработки',
+    description: 'Источники для изучения фулстек разработки',
     items: [
       {
         heading: 'Code With Antonio',
