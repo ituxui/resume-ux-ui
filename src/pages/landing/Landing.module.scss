@@ -1,0 +1,351 @@
+@use '@includes/index.scss' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // padding-top: 96px;
+  width: 100%;
+  min-height: 200vh;
+  background: var(--bg-color-solid-body);
+}
+
+.headingContainer {
+  display: grid !important;
+  grid-template-areas:
+    'heading image'
+    'description image'
+    'links image';
+  grid-template-columns: 1fr auto; /* Image takes 1 part, title/description take 2 parts */
+  grid-template-rows: auto 1fr; /* Title row auto, description row takes remaining space */
+  column-gap: 56px;
+  row-gap: 16px;
+  padding-bottom: 120px !important;
+
+  .heading {
+    grid-area: heading;
+  }
+
+  .description {
+    grid-area: description;
+    // color: var(--color_text_muted-accent_default--enabled);
+  }
+
+  .avaContainer {
+    grid-area: image;
+    max-width: 200px;
+    overflow: hidden;
+    border-radius: 32px;
+    align-self: flex-start;
+  }
+
+  .avaTilt {
+    overflow: visible;
+    background-image: url('/images/me/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    transform-style: preserve-3d;
+    border-radius: 8px;
+  }
+
+  .ava {
+    border-radius: 14px;
+    max-width: 100%;
+    object-fit: contain;
+    transform: translateZ(40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .helloSvg {
+    padding-left: 16px;
+    width: 68px;
+    margin-bottom: -6px;
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  grid-area: links;
+}
+
+@include media-m-breakpoint-and-up {
+  .avaContainer {
+    margin-top: 10px;
+  }
+}
+
+@include media-s-breakpoint-and-down {
+  .headingContainer {
+    grid-template-columns: 1fr; /* Image takes 1 part, title/description take 2 parts */
+    grid-template-areas:
+      'heading'
+      'image'
+      'description'
+      'links';
+  }
+}
+
+$firstBentoAreas: worktime, location, education, age, family, army;
+
+.first_bento {
+  grid-template-areas:
+    'worktime worktime location location'
+    'education education age age'
+    'education education family army';
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  @each $area in $firstBentoAreas {
+    &_#{$area} {
+      grid-area: #{$area};
+    }
+  }
+}
+
+.first_bento_education_it_courses {
+  justify-content: space-between !important;
+}
+
+.bento_body {
+  padding-top: 8px;
+}
+
+@media (max-width: 840px) {
+  .first_bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'worktime location'
+      'education education'
+      'family army'
+      'age age';
+  }
+}
+
+@media (max-width: 480px) {
+  // .first_bento {
+  //   display: flex !important;
+  //   flex-direction: column;
+  // }
+  .first_bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'worktime worktime'
+      'location location'
+      'education education'
+      'family army'
+      'age age';
+  }
+}
+
+@media (max-width: 319.98px) {
+  .first_bento {
+    display: flex !important;
+    flex-direction: column;
+  }
+}
+
+$secondBentoAreas: programms ai education courses soft_skills books media
+  technologies;
+
+.second_bento {
+  --small-bento-item-deg: 225;
+  grid-template-areas:
+    'programms media technologies technologies'
+    'programms ai technologies technologies'
+    'programms courses courses soft_skills'
+    'education education books books';
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  @each $area in $secondBentoAreas {
+    &_#{$area} {
+      grid-area: #{$area};
+    }
+  }
+}
+
+.second_bento_programms_figma_section {
+  margin-bottom: -16px;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  row-gap: 16px;
+}
+
+.second_bento_technologies_section {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  justify-content: space-between;
+  align-content: space-between;
+
+  height: 100%;
+  flex: 1;
+  margin-bottom: -16px;
+}
+
+.second_bento_ai,
+.second_bento_media,
+.second_bento_soft_skills {
+  background: linear-gradient(
+    45deg,
+    hsl(var(--small-bento-item-deg), 1%, 84%),
+    hsl(var(--small-bento-item-deg), 1%, 93%)
+  );
+}
+
+.second_bento_ai {
+  background-image: radial-gradient(
+    circle at 50% 100%,
+    gold 00%,
+    coral 30%,
+    skyblue
+  );
+  color: var(--color_text-accent_default--enabled--invert) !important;
+}
+
+.second_bento_ai_section {
+  h1 {
+    background: -webkit-linear-gradient(
+      72deg,
+      rgba(255, 255, 255, 0.2),
+      #ffffff
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    --font-weight: 650;
+    position: relative;
+    font-size: 64px;
+    &::after {
+      content: '> ';
+      position: absolute;
+      left: -16px;
+    }
+  }
+  .second_bento_ai_section_div {
+    margin-top: -4px;
+    margin-bottom: 8px;
+    --font-weight: 450;
+  }
+  h3,
+  .second_bento_ai_section_div {
+    opacity: 0.9;
+  }
+}
+
+.second_bento_education_section {
+  padding-top: 16px;
+}
+
+.second_bento_media_section,
+.second_bento_soft_skills_section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.second_bento_soft_skills_section {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.second_bento_books_section {
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: -8px;
+}
+
+.second_bento_books_bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  background: linear-gradient(transparent, var(--bg-read-color-body) 80%);
+
+  &_button {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--bg-read-color-body);
+    border: 1px solid var(--border_color-accent_default--enabled);
+    &:hover {
+      background: var(--bg-read-color-body);
+    }
+  }
+}
+
+// @media (max-width: 840px) {
+//   .second_bento {
+//     grid-template-areas:
+//       'programms media technologies technologies'
+//       'programms media technologies technologies'
+//       'programms ai technologies technologies'
+//       'programms ai courses courses'
+//       'programms soft_skills courses courses'
+//       'programms soft_skills courses courses'
+//       'education education books books';
+//   }
+// }
+
+@media (max-width: 840px) {
+  .second_bento_programms_figma_section {
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .second_bento {
+    grid-template-areas:
+      'programms programms programms programms'
+      'courses courses ai ai'
+      'media technologies technologies technologies'
+      'books books books soft_skills'
+      'education education education education';
+  }
+}
+
+@media (max-width: 480px) {
+  .second_bento {
+    grid-template-areas:
+      'courses courses'
+      'education education'
+      'programms media'
+      'programms ai'
+      'programms soft_skills'
+      'technologies technologies'
+      'books books';
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .second_bento {
+    grid-template-areas:
+      'programms programms programms programms programms programms'
+      'courses courses courses courses courses courses'
+      'ai ai ai ai ai ai'
+      'education education education education education education'
+      'media media media soft_skills soft_skills soft_skills'
+      'technologies technologies technologies technologies technologies technologies'
+      'books books books books books books';
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}

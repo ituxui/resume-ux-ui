@@ -1,0 +1,61 @@
+.wrapper {
+  height: 100dvh !important;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  position: relative;
+  // margin-top: -16px;
+  // margin-bottom: -16px;
+  padding: 0;
+}
+
+.text {
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  max-width: 480px;
+  gap: 8px;
+  $text-shadow-size: 1px;
+  text-shadow: -#{$text-shadow-size} -#{$text-shadow-size} 0 white,
+    #{$text-shadow-size} -#{$text-shadow-size} 0 white,
+    -#{$text-shadow-size} #{$text-shadow-size} 0 white,
+    #{$text-shadow-size} #{$text-shadow-size} 0 white,
+    -#{$text-shadow-size * 2} -#{$text-shadow-size * 2} 0 white,
+    #{$text-shadow-size * 2} -#{$text-shadow-size * 2} 0 white,
+    -#{$text-shadow-size * 2} #{$text-shadow-size * 2} 0 white,
+    #{$text-shadow-size * 2} #{$text-shadow-size * 2} 0 white,
+    -#{$text-shadow-size * 3} -#{$text-shadow-size * 3} 0 white,
+    #{$text-shadow-size * 3} -#{$text-shadow-size * 3} 0 white,
+    -#{$text-shadow-size * 3} #{$text-shadow-size * 3} 0 white,
+    #{$text-shadow-size * 3} #{$text-shadow-size * 3} 0 white;
+  z-index: 1;
+}
+
+.imageTop,
+.imageBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.imageTop {
+  top: 0;
+}
+
+.imageBottom {
+  bottom: 0;
+}

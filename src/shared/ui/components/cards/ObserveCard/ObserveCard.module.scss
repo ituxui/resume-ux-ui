@@ -1,0 +1,62 @@
+.card {
+  border-radius: 8px;
+  border: 1px solid var(--border_color-accent_default--enabled);
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+
+  &.noImage {
+    padding: 16px;
+    .content {
+      padding: 0;
+    }
+  }
+
+  &:hover {
+    background-color: var(
+      --bg_color-accent_default-backface_light-alpha--hovered
+    );
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 48px;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
+  mix-blend-mode: darken;
+}
+
+.content {
+  padding: 14px 4px;
+}
+
+.description {
+  margin: 0;
+  padding-top: 6px;
+}
+
+.observe-card-section {
+  &:not(:first-of-type) {
+    padding-top: 24px;
+  }
+  &-items {
+    padding-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    &-items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

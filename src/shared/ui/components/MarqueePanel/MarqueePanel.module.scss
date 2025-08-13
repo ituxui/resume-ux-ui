@@ -1,0 +1,42 @@
+.marquee-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  &.vertical {
+    height: 100%;
+    flex-direction: row;
+  }
+
+  :global(.rfm-marquee) {
+    display: flex;
+    white-space: nowrap;
+
+    .vertical & {
+      height: 100%;
+    }
+  }
+
+  :global(.rfm-initial-child-container) {
+    margin: 0 !important;
+    height: 100%;
+  }
+
+  :global(.rfm-child) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.marquee {
+  width: 100%;
+  height: 100%;
+
+  &.vertical {
+    height: 100%;
+  }
+}

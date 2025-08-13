@@ -1,0 +1,22 @@
+.wrapper {
+  & > * {
+    padding-bottom: 16px;
+  }
+}
+
+span {
+  display: inline-block;
+}
+
+.badges_container {
+  padding-top: 12px;
+  display: flex;
+  flex-wrap: wrap; // Позволяет элементам переноситься на новую строку
+  gap: 4px;
+}
+
+.category {
+  &:not(:first-of-type) {
+    padding-top: 12px;
+  }
+}

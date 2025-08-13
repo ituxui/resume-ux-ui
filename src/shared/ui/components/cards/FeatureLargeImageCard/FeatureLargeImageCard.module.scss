@@ -1,0 +1,34 @@
+$icon-width: 96px;
+$primary-text-color: var(--color_text-accent_default--enabled);
+$secondary-text-color: var(--color_text_muted-accent_default--enabled);
+$container-padding: 8px;
+$gap-size: 12px;
+$bg-color-enabled: var(--bg-read-color-body);
+
+.container {
+  display: flex;
+  gap: $gap-size;
+  padding: $container-padding;
+  background-color: $bg-color-enabled;
+  border-radius: 10px; // Слегка скругленные углы
+
+  &.full {
+    padding: 0;
+    border-radius: 0; // Слегка скругленные углы
+  }
+}
+
+.icon {
+  width: $icon-width;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  color: $secondary-text-color;
+}

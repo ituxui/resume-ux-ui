@@ -1,0 +1,35 @@
+.wrapper {
+  // img {
+  //   border-radius: 8px;
+  // }
+
+  &--fullView {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #000000a3;
+    align-items: center;
+    max-height: 100dvh;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    overflow: auto;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+
+    &.centered {
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    img {
+      max-width: calc(100vw - 16px);
+      margin-bottom: 8px;
+      // min-height: 100%;
+      // height: unset;
+      // max-height: unset;
+      // object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  border-radius: 20px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  &:not(.notHoverable) {
+    cursor: pointer;
+  }
+  &.notHoverable {
+    cursor: initial;
+  }
+  transition: background 0.2s, color 0.2s, border 0.2s;
+
+  font-weight: 600;
+  --font-weight: 440;
+  --font-opsz: 18;
+  color: hsl(0, 0%, 54%);
+  svg {
+    color: hsl(0, 0%, 54%);
+  }
+  .svg_custom {
+    fill: hsl(0, 0%, 54%);
+  }
+
+  &.fill {
+    background-color: hsl(0, 0%, 88%);
+    &:hover:not(.notHoverable) {
+      background: white;
+      svg {
+        color: initial;
+      }
+      .svg_custom {
+        fill: initial;
+      }
+      color: initial;
+    }
+  }
+
+  &.inverted {
+    color: var(--color_text-accent_default--enabled--invert);
+    svg {
+      color: var(--color_text-accent_default--enabled--invert);
+    }
+    .svg_custom {
+      fill: var(--color_text-accent_default--enabled--invert);
+    }
+    &.fill {
+      background-color: var(--color_text-accent_default--enabled);
+      &:hover:not(.notHoverable) {
+        opacity: 0.8;
+        svg {
+          color: var(--color_text-accent_default--enabled--invert);
+        }
+        .svg_custom {
+          fill: var(--color_text-accent_default--enabled--invert);
+        }
+        color: var(--color_text-accent_default--enabled--invert);
+      }
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    color: black;
+    border-color: hsl(0deg 0% 85.1%);
+  }
+
+  &.black {
+    background-color: black;
+    color: white;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.text {
+  white-space: nowrap;
+}
+
+.size-h1 {
+  height: 40px;
+  padding: 0 20px;
+  gap: 8px;
+}
+
+.size-h2 {
+  height: 36px;
+  padding: 0 16px;
+  gap: 8px;
+  svg {
+    width: 22px;
+  }
+}
+
+.size-h3 {
+  height: 28px;
+  padding: 0 12px;
+  gap: 6px;
+
+  svg {
+    width: 20px;
+  }
+}
+
+.size-h4 {
+  height: 24px;
+  padding: 0 8px;
+  gap: 6px;
+  svg {
+    width: 18px;
+  }
+}
+
+.size-h5 {
+  height: 20px;
+  padding: 0 6px;
+  gap: 4px;
+  svg {
+    width: 16px;
+  }
+}

@@ -1,0 +1,32 @@
+// $icon-size: 44px;
+// $primary-text-color: var(--color_text-accent_default--enabled);
+// $secondary-text-color: var(--color_text_muted-accent_default--enabled);
+// $container-padding: 8px;
+// $gap-size: 12px;
+// $bg-color-enabled: var(--bg-read-color-body);
+
+// .container {
+//   display: flex;
+//   align-items: center;
+//   gap: $gap-size;
+//   padding: $container-padding;
+//   background-color: $bg-color-enabled;
+//   border-radius: 10px; // Слегка скругленные углы
+// }
+
+// .icon {
+//   width: $icon-size;
+//   height: $icon-size;
+//   object-fit: cover;
+//   border-radius: 8px;
+// }
+
+// .textWrapper {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+// .subtitle {
+//   color: $secondary-text-color;
+// }

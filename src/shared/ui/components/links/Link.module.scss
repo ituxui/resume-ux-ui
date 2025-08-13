@@ -1,0 +1,75 @@
+// Base styles for the external link
+.link {
+  text-decoration: none; // Remove default underline
+  cursor: pointer;
+  transition: color 50ms ease-in-out, text-decoration 50ms ease-in-out;
+  text-decoration: underline;
+
+  color: var(--color_text-accent_default--enabled);
+
+  &:focus {
+    outline: 2px solid var(--color_text-accent_high--enabled); // Simple focus indicator
+    outline-offset: 2px;
+  }
+}
+
+// Accent styles
+.accent_default {
+  &:hover {
+    color: var(--color_text-accent_high--enabled); // Default blue for links
+  }
+}
+
+.accent_high {
+  color: var(--color_text-accent_high--enabled); // Default blue for links
+  font-weight: bold;
+
+  &:hover {
+    color: var(--color_text-accent_default--enabled);
+  }
+
+  &:focus {
+    outline: 2px solid var(--color_text-accent_high--enabled); // Simple focus indicator
+  }
+}
+
+// Invert mode styles
+
+:global(.invert-mode) {
+  .link {
+    color: var(
+      --color_text-accent_default--enabled--invert
+    ); // Invert mode styles
+
+    &:hover {
+      color: var(--color_text-accent_default--hovered--invert);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color_text-accent_default--enabled--invert);
+    }
+  }
+
+  // Accent styles
+  .accent_default {
+    &:hover {
+      color: var(
+        --color_text-accent_default--hovered--invert
+      ); // Default blue for links
+    }
+  }
+
+  .accent_high {
+    color: var(
+      --color_text-accent_high--enabled--invert
+    ); // Default blue for links
+
+    &:hover {
+      color: var(--color_text-accent_high--hovered--invert);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color_text-accent_high--enabled--invert); // Simple focus indicator
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export type IconTypes = 'printer' | 'clock' | 'map-pin' | 'graduation-cap' | 'cake' | 'heart' | 'shield' | 'mail' | 'send' | 'link' | 'square-arrow-out-up-right' | 'chevron-right' | 'arrow-left' | 'arrow-right' | 'plus' | 'x' | 'calendar' | 'check' | 'loader-2' | 'vk' | 'telegram';

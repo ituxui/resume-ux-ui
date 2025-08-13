@@ -1,0 +1,89 @@
+@use '@includes/index.scss' as *;
+
+.size-0 {
+  font-size: 46px;
+  line-height: 52px;
+  letter-spacing: -1px;
+
+  --font-weight: 400;
+}
+
+.size-1 {
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -0.75px;
+  --font-weight: 400;
+}
+
+.size-2 {
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.5px;
+  --font-weight: 400;
+}
+
+.size-3 {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.15px;
+  --font-weight: 450;
+
+  &.kind-thin {
+    --font-weight: 350;
+    em {
+      --font-weight: 400;
+    }
+  }
+}
+
+.size-4 {
+  font-size: 17px;
+  line-height: 22px;
+  --font-weight: 450;
+  &.kind-thin {
+    --font-weight: 380;
+    em {
+      --font-weight: 550;
+    }
+  }
+}
+
+.size-5 {
+  font-size: 15px;
+  line-height: 20px;
+  --font-weight: 500;
+}
+
+@include media-s-breakpoint-and-down {
+  .size-0 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .size-1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .size-2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .size-3 {
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  .size-4 {
+    font-size: 17px;
+    line-height: 22px;
+    --font-weight: 400;
+  }
+
+  .size-5 {
+    font-size: 16px;
+    line-height: 20px;
+    --font-weight: 400;
+  }
+}

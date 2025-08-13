@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+  // Здесь вы можете задать начальные top, left или другие смещения
+  // Например, чтобы он начинался в определенном месте страницы
+  top: 120px; /* Пример начальной позиции */
+  left: 50%;
+  transform: translateX(-50%); // Центрирование
+}
+
+.fixed {
+  position: fixed;
+  // top и left будут установлены инлайн в компоненте для динамической корректировки
+
+  .wrapper {
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .headingLeft {
+    overflow: hidden;
+  }
+
+  .ava {
+    margin-top: 0px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  max-width: var(--width-max-text-content);
+  width: 100%;
+  transition: 300ms ease-in-out;
+}
+
+.heading {
+  font-size: 32px;
+  line-height: 40px;
+  --font-weight: 400;
+
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.ava {
+  width: 32px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-left: 8px;
+  margin-right: 8px;
+
+  transition: 300ms ease-in-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.fullscreenImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

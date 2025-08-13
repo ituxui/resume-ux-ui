@@ -1,0 +1,326 @@
+.brandIconContainer {
+  position: relative;
+  --size: 48px;
+  --icon-size: 32px;
+  min-width: var(--size);
+  height: var(--size);
+  padding: 0 12px;
+
+  border-radius: 999px;
+  border: 1px solid hsl(240 7% 94% / 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color_text-accent_default--enabled);
+  cursor: pointer;
+  overflow: hidden;
+
+  margin: 8px;
+  // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: hsla(214, 20%, 0%, 0) 0px 2px 4px 0px inset,
+    hsla(214, 8%, 27%, 0.04) 0px 0px 0px 1px,
+    hsla(220, 4%, 22%, 0.04) 0px 1px 1px -0.5px,
+    hsla(221, 5%, 22%, 0.04) 0px 3px 3px -1.5px,
+    hsla(221, 5%, 22%, 0.04) 0px 6px 6px -3px,
+    hsla(214, 8%, 27%, 0.04) 0px 12px 12px -6px,
+    hsla(214, 8%, 27%, 0.04) 0px 24px 24px -12px;
+  transition: all 0.5s;
+
+  &:hover {
+    box-shadow: hsla(214, 20%, 0%, 0.16) 0px 2px 4px 0px inset;
+    color: var(--color_text-accent_high--enabled);
+  }
+
+  &:not(.hasMargin) {
+    margin: 0;
+  }
+  // &:hover {
+  //   transform: scale(1.05);
+  // }
+
+  // &.shaking {
+  //   animation: shake2 10s;
+  //   animation-iteration-count: infinite;
+  // }
+
+  svg {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    min-width: var(--icon-size);
+    min-height: var(--icon-size);
+  }
+
+  &.fullSizeIcon {
+    --icon-size: var(--size);
+  }
+}
+
+.dotContainer {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+// .blinkingDot {
+//   width: 8px;
+//   height: 8px;
+//   background-color: #ff4d4f;
+//   border-radius: 50%;
+//   animation: blink 2s infinite;
+// }
+
+.tooltip {
+  background-color: black;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: min(calc(100vw - 32px), 300px);
+}
+
+.tooltipArrow {
+  &::before {
+    content: '';
+    display: block;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent black transparent;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  5% {
+    transform: translate(5px, 5px) rotate(5deg);
+  }
+  10% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  15% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  20% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes shake2 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+
+  2% {
+    transform: translate(2.5px, 1.5px) rotate(-0.5deg);
+  }
+
+  4% {
+    transform: translate(2.5px, 0.5px) rotate(-0.5deg);
+  }
+
+  6% {
+    transform: translate(2.5px, 0.5px) rotate(0.5deg);
+  }
+
+  8% {
+    transform: translate(2.5px, 2.5px) rotate(1.5deg);
+  }
+
+  10% {
+    transform: translate(1.5px, -1.5px) rotate(-0.5deg);
+  }
+
+  12% {
+    transform: translate(-1.5px, 0.5px) rotate(0.5deg);
+  }
+
+  14% {
+    transform: translate(0.5px, 1.5px) rotate(-0.5deg);
+  }
+
+  16% {
+    transform: translate(-1.5px, 0.5px) rotate(0.5deg);
+  }
+
+  18% {
+    transform: translate(1.5px, -1.5px) rotate(0.5deg);
+  }
+
+  20% {
+    transform: translate(2.5px, 1.5px) rotate(-0.5deg);
+  }
+
+  22% {
+    transform: translate(0.5px, -1.5px) rotate(1.5deg);
+  }
+
+  24% {
+    transform: translate(0.5px, -0.5px) rotate(-0.5deg);
+  }
+
+  26% {
+    transform: translate(0.5px, -1.5px) rotate(1.5deg);
+  }
+
+  28% {
+    transform: translate(0.5px, 0.5px) rotate(0.5deg);
+  }
+
+  30% {
+    transform: translate(2.5px, 0.5px) rotate(0.5deg);
+  }
+
+  32% {
+    transform: translate(-0.5px, 0.5px) rotate(0.5deg);
+  }
+
+  34% {
+    transform: translate(2.5px, 0.5px) rotate(-0.5deg);
+  }
+
+  36% {
+    transform: translate(0.5px, 2.5px) rotate(0.5deg);
+  }
+
+  38% {
+    transform: translate(-0.5px, 0.5px) rotate(-0.5deg);
+  }
+
+  40% {
+    transform: translate(-1.5px, 1.5px) rotate(-0.5deg);
+  }
+
+  42% {
+    transform: translate(1.5px, 2.5px) rotate(-0.5deg);
+  }
+
+  44% {
+    transform: translate(-0.5px, 0.5px) rotate(-0.5deg);
+  }
+
+  46% {
+    transform: translate(2.5px, 1.5px) rotate(-0.5deg);
+  }
+
+  48% {
+    transform: translate(-1.5px, 2.5px) rotate(1.5deg);
+  }
+
+  50% {
+    transform: translate(-0.5px, -1.5px) rotate(-0.5deg);
+  }
+
+  52% {
+    transform: translate(-1.5px, 1.5px) rotate(1.5deg);
+  }
+
+  54% {
+    transform: translate(-1.5px, -1.5px) rotate(-0.5deg);
+  }
+
+  56% {
+    transform: translate(2.5px, 1.5px) rotate(0.5deg);
+  }
+
+  58% {
+    transform: translate(-1.5px, -1.5px) rotate(0.5deg);
+  }
+
+  60% {
+    transform: translate(1.5px, 0.5px) rotate(0.5deg);
+  }
+
+  62% {
+    transform: translate(-0.5px, -1.5px) rotate(1.5deg);
+  }
+
+  64% {
+    transform: translate(0.5px, 1.5px) rotate(-0.5deg);
+  }
+
+  66% {
+    transform: translate(-0.5px, 2.5px) rotate(0.5deg);
+  }
+
+  68% {
+    transform: translate(2.5px, 2.5px) rotate(1.5deg);
+  }
+
+  70% {
+    transform: translate(1.5px, -1.5px) rotate(0.5deg);
+  }
+
+  72% {
+    transform: translate(0.5px, 2.5px) rotate(-0.5deg);
+  }
+
+  74% {
+    transform: translate(0.5px, -1.5px) rotate(1.5deg);
+  }
+
+  76% {
+    transform: translate(-0.5px, 0.5px) rotate(0.5deg);
+  }
+
+  78% {
+    transform: translate(1.5px, -0.5px) rotate(0.5deg);
+  }
+
+  80% {
+    transform: translate(-0.5px, 2.5px) rotate(-0.5deg);
+  }
+
+  82% {
+    transform: translate(-1.5px, 0.5px) rotate(1.5deg);
+  }
+
+  84% {
+    transform: translate(-1.5px, 2.5px) rotate(-0.5deg);
+  }
+
+  86% {
+    transform: translate(1.5px, -0.5px) rotate(0.5deg);
+  }
+
+  88% {
+    transform: translate(-1.5px, 0.5px) rotate(0.5deg);
+  }
+
+  90% {
+    transform: translate(0.5px, 0.5px) rotate(0.5deg);
+  }
+
+  92% {
+    transform: translate(0.5px, -1.5px) rotate(-0.5deg);
+  }
+
+  94% {
+    transform: translate(0.5px, 0.5px) rotate(-0.5deg);
+  }
+
+  96% {
+    transform: translate(2.5px, 2.5px) rotate(1.5deg);
+  }
+
+  98% {
+    transform: translate(1.5px, 2.5px) rotate(0.5deg);
+  }
+}

@@ -1,0 +1,83 @@
+@use '@includes/index.scss' as *;
+
+.tableWrapper {
+  overflow-x: auto;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 48px;
+  // @include media-1280px-breakpoint-and-down {
+  //   max-height: calc(100vh - min(200px, 50vh));
+  // }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1200px; /* Обеспечивает горизонтальную прокрутку */
+}
+
+.header {
+  background-color: #f4f4f4;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  font-weight: bold;
+  max-width: calc(100vw - 50px);
+  min-width: 180px;
+}
+
+.stickyColumn {
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+  // z-index: 5;
+  border-right: 1px solid #ddd;
+  background-color: #f4f4f4;
+  &:first-of-type {
+    min-width: unset;
+    max-width: max(140px, 25vw);
+    // padding-left: var(--padding-left_right_edges);
+  }
+}
+
+.cell {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.cell a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.cell a:hover {
+  text-decoration: underline;
+}
+
+.status {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.advantages {
+  color: #2e7d32; /* Зеленый для преимуществ */
+  margin: 8px 0;
+}
+
+.disadvantages {
+  color: #d32f2f; /* Красный для недостатков */
+  margin: 8px 0;
+}
+
+@include media-m-breakpoint-and-up {
+  .tableWrapper {
+    max-width: calc(100% - 48px);
+    margin-left: 24px;
+    margin-right: 24px;
+    border-radius: 16px;
+  }
+}

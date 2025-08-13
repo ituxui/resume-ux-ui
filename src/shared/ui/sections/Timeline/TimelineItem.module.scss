@@ -1,0 +1,122 @@
+.timelineItem {
+  display: flex;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.lineAndIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.completedIcon {
+  background-color: var(
+    --color_text-accent_high--enabled
+  ); // Цвет для завершенных
+  color: white; // Цвет иконки
+}
+.calendarIcon {
+  background-color: var(
+    --color_text-accent_high--enabled
+  ); // Цвет для завершенных
+  color: white; // Цвет иконки
+}
+
+.inProgressIcon {
+  // border: 2px solid #5bc0de; // Пример голубой границы для в процессе
+  border: 1px solid;
+  background-color: white;
+  // color: #5bc0de; // Цвет иконки
+}
+
+.checkIcon,
+.loaderIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.spin {
+  animation: spin 1s linear infinite; // Анимация вращения для Loader2
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.verticalLine {
+  width: 2px;
+  background-color: #e0e0e0;
+  flex-grow: 1;
+  margin-top: 0;
+  margin-bottom: -4px;
+}
+
+.last {
+  * > div {
+    padding-bottom: 0 !important;
+  }
+  .verticalLine {
+    margin-bottom: 6px;
+  }
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.date {
+  color: var(--color_text_muted-accent_default--enabled);
+  margin-top: 4px;
+}
+
+.description {
+  color: var(--color_text_muted-accent_default--enabled);
+  // margin-bottom: 24px;
+}
+
+.innerLink {
+  &:hover {
+    cursor: pointer;
+    color: var(--color_text-accent_high--enabled);
+    text-decoration: underline;
+  }
+}
+
+.header {
+  display: inline;
+  & > * {
+    display: inline;
+  }
+  // flex-direction: column;
+  // gap: 8px;
+  // & > *:not(:last-child) {
+  //   margin-right: 8px;
+  //   display: inline;
+  // }
+  // .links {
+  //   display: inline;
+  //   gap: 8px;
+  // }
+}

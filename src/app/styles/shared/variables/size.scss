@@ -1,0 +1,14 @@
+@use '@includes/index.scss' as *;
+
+:root {
+  --width-max-text-content: 748px;
+
+  --padding-left_right_edges: 24px;
+
+  --border-radius-modal: 24px;
+  --border-radius-modal-inner: 16px;
+
+  @include media-s-breakpoint-and-down {
+    --padding-left_right_edges: 16px;
+  }
+}

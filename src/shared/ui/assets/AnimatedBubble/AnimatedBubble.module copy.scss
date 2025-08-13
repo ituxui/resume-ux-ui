@@ -1,0 +1,135 @@
+/* Keyframes для анимации точек */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.5;
+  }
+}
+
+/* Keyframes для анимации появления облачка */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.bubbleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.bubble {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(
+    25deg,
+    hsl(var(--small-bento-item-deg), 1%, 99%),
+    hsl(var(--small-bento-item-deg), 1%, 85%)
+  );
+  background-origin: padding-box;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  background-size: auto;
+  border-radius: 44.5333px;
+  box-shadow: rgb(255, 255, 255) -1.11333px 1.11333px 1.11333px 0.222667px inset;
+  height: 89.0625px;
+  position: relative;
+  unicode-bidi: isolate;
+  width: 133.594px;
+
+  // filter: drop-shadow(
+  //     -0.1vmin 0.2vmin 0.01vmin hsla(var(--small-bento-item-deg), 1%, 62%, 0.565)
+  //   )
+  //   drop-shadow(
+  //     -0.2vmin 0.3vmin 0.01vmin hsla(var(--small-bento-item-deg), 1%, 62%, 0.502)
+  //   )
+  //   drop-shadow(
+  //     -0.3vmin 0.4vmin 0.01vmin hsla(var(--small-bento-item-deg), 1%, 62%, 0.439)
+  //   )
+  //   drop-shadow(
+  //     -0.4vmin 0.5vmin 0.01vmin hsla(var(--small-bento-item-deg), 1%, 62%, 0.376)
+  //   )
+  //   drop-shadow(
+  //     -0.5vmin 0.6vmin 0.01vmin hsla(var(--small-bento-item-deg), 1%, 62%, 0.314)
+  //   )
+  //   drop-shadow(
+  //     -0.6vmin 0.7vmin 0.01vmin hsla(var(--small-bento-item-deg), 1%, 62%, 0.251)
+  //   )
+  //   drop-shadow(
+  //     -0.7vmin 0.8vmin 0.01vmin hsla(var(--small-bento-item-deg), 1%, 62%, 0.188)
+  //   )
+  //   drop-shadow(
+  //     -0.8vmin 0.9vmin 0.01vmin hsla(var(--small-bento-item-deg), 1%, 62%, 0.125)
+  //   )
+  //   drop-shadow(
+  //     -0.9vmin 1vmin 0.01vmin hsla(var(--small-bento-item-deg), 1%, 62%, 0.063)
+  //   );
+
+  &::after {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: radial-gradient(
+      circle at 150% 35%,
+      hsla(var(--small-bento-item-deg), 0%, 100%, 0) 5vmin,
+      hsl(var(--small-bento-item-deg), 1%, 95%) calc(1px + 5vmin),
+      hsl(var(--small-bento-item-deg), 1%, 95%) 100%
+    );
+    background-origin: padding-box;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    background-size: auto;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    bottom: -24.4933px;
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    height: 26.7188px;
+    position: absolute;
+    right: 31px;
+    width: 51px;
+  }
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: hsl(var(--small-bento-item-deg), 9%, 30%);
+  border-radius: 50%;
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+.dot1 {
+  animation-delay: 0s;
+}
+
+.dot2 {
+  animation-delay: 0.2s;
+}
+
+.dot3 {
+  animation-delay: 0.4s;
+}
