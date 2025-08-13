@@ -19,7 +19,8 @@
     touch-action: pan-y pinch-zoom;
     margin-left: calc(var(--slide-spacing) * -1);
     transition: height 0.2s;
-    align-items: flex-start; /* Add this */
+    align-items: flex-start;
+    max-height: calc(100vh - 96px - 48px);
   }
 
   &__slide {
@@ -30,6 +31,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    max-height: calc(100vh - 96px - 48px);
   }
 
   &.mode--mobileScreens:not(&--fullView) {
@@ -46,8 +48,9 @@
     justify-content: center;
     // min-height: var(--slide-height);
     user-select: none;
-    width: 100%;
+    // width: 100%;
     object-fit: cover; // Ensure images cover the slide area
+    max-height: calc(100vh - 96px - 48px);
   }
 
   &--fullView {
