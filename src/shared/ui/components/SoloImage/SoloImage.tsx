@@ -63,13 +63,15 @@ export const SoloImage: React.FC<PropType> = (props) => {
           [styles['wrapper--fullView']]: isFullView,
           [styles[`mode--${mode}`]]: mode,
           [styles.centered]: isCentered,
+          [styles.navigateTo]: navigateTo,
         })}
         onClick={() => {
           if (navigateTo) {
             navigate(navigateTo)
-          }
-          if (isFullView) {
+          } else if (isFullView) {
             setIsFullView(false);
+          } else if (!isFullView) {
+            setIsFullView(true);
           }
         }}
       >
@@ -77,11 +79,6 @@ export const SoloImage: React.FC<PropType> = (props) => {
           ref={imgRef}
           className={styles['wrapper__viewport']}
           {...others}
-          onClick={() => {
-            if (!isFullView) {
-              setIsFullView(true);
-            }
-          }}
           onLoad={checkImageHeight}
         />
       </div>
