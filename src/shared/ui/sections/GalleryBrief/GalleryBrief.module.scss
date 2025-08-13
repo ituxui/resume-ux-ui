@@ -92,7 +92,8 @@
       object-fit: contain;
       box-shadow: none;
       justify-self: center;
-      max-width: calc(100vw - 48px);
+      // max-width: calc(100vw - 48px);
+      max-width: 100%;
       border-radius: 0;
     }
 

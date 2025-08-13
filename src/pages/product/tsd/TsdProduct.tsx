@@ -321,7 +321,7 @@ export const TsdProduct = () => {
         </ul>
 
         <Section sublevel={1}>
-          <GalleryBrief images={['images/product/tsd/screens/total.png']} />
+          <SoloImage src="images/product/tsd/screens/total.png" />
         </Section>
 
         <GalleryBrief
