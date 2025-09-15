@@ -38,19 +38,19 @@
     align-self: flex-start;
   }
 
-  .avaTilt {
-    overflow: visible;
-    background-image: url('/images/me/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    transform-style: preserve-3d;
-    border-radius: 8px;
-  }
+  // .avaTilt {
+  //   overflow: visible;
+  //   background-image: url('/images/me/bg.png');
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   display: flex;
+  //   transform-style: preserve-3d;
+  //   border-radius: 8px;
+  // }
 
   .ava {
-    border-radius: 14px;
+    border-radius: 15px;
     max-width: 100%;
     object-fit: contain;
     transform: translateZ(40px);
@@ -150,8 +150,7 @@ $firstBentoAreas: worktime, location, education, age, family, army;
   }
 }
 
-$secondBentoAreas: programms ai education courses soft_skills books media
-  technologies;
+$secondBentoAreas: programms ai education courses soft_skills books media technologies;
 
 .second_bento {
   --small-bento-item-deg: 225;
@@ -197,30 +196,17 @@ $secondBentoAreas: programms ai education courses soft_skills books media
 .second_bento_ai,
 .second_bento_media,
 .second_bento_soft_skills {
-  background: linear-gradient(
-    45deg,
-    hsl(var(--small-bento-item-deg), 1%, 84%),
-    hsl(var(--small-bento-item-deg), 1%, 93%)
-  );
+  background: linear-gradient(45deg, hsl(var(--small-bento-item-deg), 1%, 84%), hsl(var(--small-bento-item-deg), 1%, 93%));
 }
 
 .second_bento_ai {
-  background-image: radial-gradient(
-    circle at 50% 100%,
-    gold 00%,
-    coral 30%,
-    skyblue
-  );
+  background-image: radial-gradient(circle at 50% 100%, gold 00%, coral 30%, skyblue);
   color: var(--color_text-accent_default--enabled--invert) !important;
 }
 
 .second_bento_ai_section {
   h1 {
-    background: -webkit-linear-gradient(
-      72deg,
-      rgba(255, 255, 255, 0.2),
-      #ffffff
-    );
+    background: -webkit-linear-gradient(72deg, rgba(255, 255, 255, 0.2), #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-top: 12px;

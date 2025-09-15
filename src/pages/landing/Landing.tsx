@@ -62,7 +62,7 @@ export const Landing = () => {
               className={Styles.ava}
             />
           </Tilt> */}
-          <img src='images/me/me_current.jpg' alt="я" className={Styles.ava} />
+          <img src='images/me/me_current.png' alt="я" className={Styles.ava} />
         </div>
       </Section>
 
