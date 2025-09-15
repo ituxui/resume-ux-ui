@@ -1,0 +1,14 @@
+/images/product/uipScreens/Apartment.png
+/images/product/uipScreens/Catalogue All Apartments.png
+/images/product/uipScreens/Catalogue Estate Apartments.png
+/images/product/uipScreens/Catalogue Estate Complex.png
+/images/product/uipScreens/Estate Landing Aura.png
+/images/product/uipScreens/Estate Landing Восточный Ветер 2.png
+/images/product/uipScreens/Estate Landing Ветер Дом 1.png
+/images/product/uipScreens/Estates All.png
+/images/product/uipScreens/News All.png
+/images/product/uipScreens/One piece of news.png
+/images/product/uipScreens/Projects.png
+/images/product/uipScreens/Sales promotion.png
+/images/product/uipScreens/Sales All.png
+/images/product/uipScreens/uiScreensMainPage.png
