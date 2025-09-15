@@ -60,6 +60,12 @@
     align-items: center;
   }
 
+  @include media-s-breakpoint-and-down {
+    .ava {
+      transform: scaleX(-1);
+    }
+  }
+
   .helloSvg {
     padding-left: 16px;
     width: 68px;
