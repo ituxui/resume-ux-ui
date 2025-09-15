@@ -36,6 +36,8 @@ export const PreloadImages: React.FC = () => {
       <img src="/images/brand/clickup.png" alt="" />
       <img src="/images/brand/clockify.png" alt="" />
       <img src="/images/brand/drawio.png" alt="" />
+      <img src="/images/brand/education/education bottom.png" alt="" />
+      <img src="/images/brand/education/education top.png" alt="" />
       <img src="/images/brand/figma.png" alt="" />
       <img src="/images/brand/focustodo.png" alt="" />
       <img src="/images/brand/keymanager.png" alt="" />
