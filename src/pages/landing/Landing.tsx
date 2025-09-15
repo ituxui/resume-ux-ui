@@ -62,7 +62,8 @@ export const Landing = () => {
               className={Styles.ava}
             />
           </Tilt> */}
-          <img src='images/me/me_current.jpg' alt="я" className={Styles.ava} />
+          {/* <img src='images/me/1757918111.jpg' alt="я" className={Styles.ava} /> */}
+          <img src='images/me/1716643.png' alt="я" className={Styles.ava} />
         </div>
       </Section>
 
@@ -171,7 +172,7 @@ export const Landing = () => {
 
       <Section>
         <Section sublevel={1}>
-          <Badge inverted showIcon={false} text={'Кликните, чтобы узнать больше'} />
+          <Badge inverted showIcon={false} text={'Кликните, чтобы не пропустить информацию'} />
         </Section>
         <Heading size={2} className={classNames(Styles.heading)}>
           Дополнительно обо мне
