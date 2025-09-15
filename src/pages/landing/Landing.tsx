@@ -8,7 +8,7 @@ import CommonStyles from '@commonStyles/CommonStyles.module.scss'
 import { Badge, } from '@shared/ui';
 import {
   AgeDisplay,
-  BirthdayCountdown, MarqueePanelSection, MediaSvg, MoscowTimeDifference, TimezoneComparison, VladivostokClock,
+  BirthdayCountdown, MarqueePanelSection, MediaSvg, MoscowTimeDifference, PreloadImages, TimezoneComparison, VladivostokClock,
   WorkDuration
 } from './assets';
 import {
@@ -452,6 +452,7 @@ export const Landing = () => {
           </div>
         </Section>
       </Section>
+      <PreloadImages />
     </>
   )
 };

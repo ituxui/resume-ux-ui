@@ -10,6 +10,12 @@ git push -u origin main
 
 # Сайт
 
+generate preload images tags
+
+node generatePreloadImages.js
+
+# Сайт
+
 https://ituxui.github.io/resume/
 
 # React + TypeScript + Vite
