@@ -1,4 +1,4 @@
-import Tilt from 'react-parallax-tilt';
+// import Tilt from 'react-parallax-tilt';
 import classNames from 'classnames';
 
 import Styles from './Landing.module.scss';
@@ -46,7 +46,7 @@ export const Landing = () => {
 
         <div className={Styles.avaContainer}>
 
-          <Tilt
+          {/* <Tilt
             perspective={1000}
             // glareEnable={true}
             // glareMaxOpacity={0.45}
@@ -61,7 +61,8 @@ export const Landing = () => {
               alt="Вверх"
               className={Styles.ava}
             />
-          </Tilt>
+          </Tilt> */}
+          <img src='images/me/me_current.jpg' alt="я" className={Styles.ava} />
         </div>
       </Section>
 
