@@ -13,14 +13,14 @@ export const HigherEducationModalContent = () => (
 
       <PageModal.Content>
         <Section sublevel={1} className={Styles.section}>
-          <img src='images/education/education top.png' alt='education top' className={Styles.imageTop} />
+          <img src='images/brand/education/education top.png' alt='education top' className={Styles.imageTop} />
           <Section sublevel={1} className={Styles.text}>
             <Heading size={4}><ExternalLink href='https://ru.wikipedia.org/wiki/Педагогический_институт_ТОГУ'>Педагогический Институт Тихоокеанского Государственного Университета ↗</ExternalLink></Heading>
             <div>Факультет востоковедения и истории</div>
             <div>Переводчик-лингвист китайского и английского языков</div>
             <div><em>2006-2012 гг.</em></div>
           </Section>
-          <img src='images/education/education bottom.png' alt='education bottom' className={Styles.imageBottom} />
+          <img src='images/brand/education/education bottom.png' alt='education bottom' className={Styles.imageBottom} />
         </Section>
       </PageModal.Content>
     </PageModal.Container>
