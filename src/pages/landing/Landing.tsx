@@ -429,7 +429,7 @@ export const Landing = () => {
           <Badge inverted showIcon={false} text={'Скачайте'} />
         </Section>
         <Heading size={2} className={classNames(Styles.heading)}>
-          Подарки за просмотр
+          Подарок за просмотр
         </Heading>
 
 
@@ -443,7 +443,7 @@ export const Landing = () => {
               </Bento.Header>
 
               <Bento.Section className={CommonStyles.muted}>
-                <div>Фреймворк (алгоритм) выбора типа тестирования. Предлагайте свои правки.</div>
+                <div>Фреймворк (алгоритм) выбора типа тестирования. Вы можете предложить свои правки. Последнее обновление 15.09.2025</div>
               </Bento.Section>
             </Bento.Item>
 
