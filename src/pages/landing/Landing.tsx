@@ -447,7 +447,7 @@ export const Landing = () => {
               </Bento.Section>
             </Bento.Item>
 
-            <Bento.Item className={Styles.third_bento_ux_roadmap}>
+            {/* <Bento.Item className={Styles.third_bento_ux_roadmap}>
               <Bento.Header headingSize={4}>
                 Что нужно знать UX дизайнеру?
               </Bento.Header>
@@ -455,7 +455,7 @@ export const Landing = () => {
               <Bento.Section className={CommonStyles.muted}>
                 <div>Подборка материалов в Obsidian, которые нужны в работе и понимании профессии UX дизайнера. Список пополняется. Последнее обновление 15.09.2025</div>
               </Bento.Section>
-            </Bento.Item>
+            </Bento.Item> */}
 
           </Bento>
 
