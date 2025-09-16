@@ -95,23 +95,23 @@ export const listOfCompletedProjects: TimelineItemData[] = [
     </>,
     status: 'completed',
   },
-  {
-    title: 'Международный оператор доставки посылок из Китая →',
-    innerLink: routeMap.dostav,
-    description: <>
-      <InfoItem heading='Компания'>(NDA)</InfoItem>
-      <InfoItem heading='Статус'>Готовится к выпуску MVP</InfoItem>
-      <InfoItem heading='Платформа'>Web</InfoItem>
-      <InfoItem heading='Описание разработки'>
-        <InnerLink to={routeMap.dostav} accent='high'>Перейти →</InnerLink>
-      </InfoItem>
+  // {
+  //   title: 'Международный оператор доставки посылок из Китая →',
+  //   innerLink: routeMap.dostav,
+  //   description: <>
+  //     <InfoItem heading='Компания'>(NDA)</InfoItem>
+  //     <InfoItem heading='Статус'>Готовится к выпуску MVP</InfoItem>
+  //     <InfoItem heading='Платформа'>Web</InfoItem>
+  //     <InfoItem heading='Описание разработки'>
+  //       <InnerLink to={routeMap.dostav} accent='high'>Перейти →</InnerLink>
+  //     </InfoItem>
 
-      <Section sublevel={1}>
-        <SoloImage src='images/landing/dostav1.jpg' navigateTo={routeMap.dostav} alt='Проект УИП' />
-      </Section>
-    </>,
-    status: 'completed',
-  },
+  //     <Section sublevel={1}>
+  //       <SoloImage src='images/landing/dostav1.jpg' navigateTo={routeMap.dostav} alt='Проект УИП' />
+  //     </Section>
+  //   </>,
+  //   status: 'completed',
+  // },
   {
     title: 'Система учёта пассажиров бизнес зала международного авиатерминала «Аэроакт» →',
     innerLink: routeMap.aeroakt,

@@ -63,7 +63,7 @@ export const Landing = () => {
             />
           </Tilt> */}
           {/* <img src='images/me/1757918111.jpg' alt="я" className={Styles.ava} /> */}
-          <img src='images/me/1716643.png' alt="я" className={Styles.ava} />
+          <img src='images/me/647141.png' alt="я" className={Styles.ava} />
         </div>
       </Section>
 
@@ -424,6 +424,43 @@ export const Landing = () => {
         </Section>
       </Section>
 
+      <Section>
+        <Section sublevel={1}>
+          <Badge inverted showIcon={false} text={'Скачайте'} />
+        </Section>
+        <Heading size={2} className={classNames(Styles.heading)}>
+          Подарки за просмотр
+        </Heading>
+
+
+        {/* // TODO: */}
+        <Section sublevel={1}>
+          <Bento>
+
+            <Bento.Item className={Styles.third_bento_framework}>
+              <Bento.Header headingSize={4}>
+                Как правильно выбрать тестирование?
+              </Bento.Header>
+
+              <Bento.Section className={CommonStyles.muted}>
+                <div>Фреймворк (алгоритм) выбора типа тестирования. Предлагайте свои правки.</div>
+              </Bento.Section>
+            </Bento.Item>
+
+            <Bento.Item className={Styles.third_bento_ux_roadmap}>
+              <Bento.Header headingSize={4}>
+                Что нужно знать UX дизайнеру?
+              </Bento.Header>
+
+              <Bento.Section className={CommonStyles.muted}>
+                <div>Подборка материалов в Obsidian, которые нужны в работе и понимании профессии UX дизайнера. Список пополняется. Последнее обновление 15.09.2025</div>
+              </Bento.Section>
+            </Bento.Item>
+
+          </Bento>
+
+        </Section>
+      </Section>
 
       <Section>
         <Section sublevel={1}>
@@ -452,6 +489,7 @@ export const Landing = () => {
           </div>
         </Section>
       </Section>
+
       <PreloadImages />
     </>
   )

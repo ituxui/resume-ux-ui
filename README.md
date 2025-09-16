@@ -16,7 +16,7 @@ node generatePreloadImages.js
 
 # Сайт
 
-https://ituxui.github.io/resume/
+https://resume-ux-ui.vercel.app/
 
 # React + TypeScript + Vite
 

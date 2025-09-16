@@ -371,6 +371,7 @@ export const DostavProduct = () => {
       </Section>
 
       <Section sublevel={0}>
+        {/* @ts-expect-error ts ошибка ожидалась, так как продукт удалён из общего массива */}
         <FooterNavigation current="Международный оператор доставки посылок" />
       </Section>
     </>

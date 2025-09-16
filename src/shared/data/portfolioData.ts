@@ -19,10 +19,10 @@ export const portfolioData = [
     title: 'Дашбоард для сервиса StellarRDP — безопасного управления удалённым доступом через Remote Desktop Protocol',
     url: 'rdp-dashboard'
   },
-  {
-    title: 'Международный оператор доставки посылок',
-    url: 'dostav'
-  },
+  // {
+  //   title: 'Международный оператор доставки посылок',
+  //   url: 'dostav'
+  // },
   {
     title: 'Система учёта пассажиров бизнес зала международного авиатерминала',
     url: 'aeroakt'
