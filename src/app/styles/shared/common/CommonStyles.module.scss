@@ -1,9 +1,23 @@
 @use '@includes/index.scss' as *;
 
+.inverted {
+  color: var(--color_text-accent_default-inverted--enabled);
+  em {
+    color: var(--color_text-accent_high--enabled--invert);
+  }
+}
+
 .muted {
   color: var(--color_text_muted-accent_default--enabled);
   em {
     color: var(--color_text-accent_default--enabled);
+  }
+}
+
+.muted.inverted {
+  color: var(--color_text_muted-accent_default--inverted--enabled);
+  em {
+    color: var(--color_text-accent_default-inverted--enabled);
   }
 }
 
@@ -90,9 +104,7 @@
       &::before {
         counter-increment: listItemCounter; // Увеличиваем счетчик на 1 для каждого <li>
         content: counter(listItemCounter, decimal-leading-zero) '. '; // Форматируем счетчик как "01.", "02." и т.д.
-        color: var(
-          --color_text-accent_high--enabled
-        ); // Устанавливаем оранжевый цвет
+        color: var(--color_text-accent_high--enabled); // Устанавливаем оранжевый цвет
         // position: absolute;
         left: 0;
         top: 0;

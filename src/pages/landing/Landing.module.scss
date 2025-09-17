@@ -340,3 +340,25 @@ $secondBentoAreas: programms ai education courses soft_skills books media techno
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
+
+.third_bento {
+  &_framework {
+    /* Сначала указывается слой с картинкой, затем слой с градиентом */
+    background-image: linear-gradient(to right, #050706, #344561);
+    overflow: hidden;
+
+    padding: 32px;
+
+    &_header {
+      padding-bottom: 16px;
+    }
+
+    &_image {
+      max-width: calc(100% + 64px);
+      margin-bottom: -32px;
+      align-self: flex-end;
+      margin-right: -32px;
+      max-height: 300px;
+    }
+  }
+}

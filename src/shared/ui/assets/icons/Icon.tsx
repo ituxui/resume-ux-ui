@@ -20,6 +20,7 @@ import {
   Shield,
   SquareArrowOutUpRight,
   X,
+  Download,
 } from 'lucide-react';
 
 // Импорты для иконок VK и Telegram
@@ -46,6 +47,7 @@ const iconComponents = {
   check: Check,
   'chevron-right': ChevronRight,
   clock: Clock,
+  download: Download,
   'graduation-cap': GraduationCap,
   heart: Heart,
   link: Link,

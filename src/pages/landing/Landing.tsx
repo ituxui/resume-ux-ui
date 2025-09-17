@@ -17,10 +17,54 @@ import {
 import { ArrowRight, Plus } from 'lucide-react';
 import { usePageModal } from '@pages/PageModal/components';
 import { listOfCompletedProjects } from '@src/app/data/listOfCompletedProjects';
+import { useEffect, useState } from 'react';
 
 
 export const Landing = () => {
   const { createOpenModalHandler } = usePageModal();
+  const [downloadDate, setDownloadDate] = useState<string | null>(null);
+  const [downloadDateObj, setDownloadDateObj] = useState<Date | null>(null);
+
+  const lastUpdated = new Date('2025-09-15'); // Формат YYYY-MM-DD является стандартом
+  const lastUpdatedDate = lastUpdated.toLocaleDateString('ru-RU', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
+
+  useEffect(() => {
+    const savedDate = localStorage.getItem('frameworkDownloadDate');
+    if (savedDate) {
+      const dateObj = new Date(savedDate);
+      setDownloadDateObj(dateObj);
+      setDownloadDate(dateObj.toLocaleDateString('ru-RU', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+      }));
+    }
+  }, []);
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Фреймворк для определения типа тестирования 4.drawio.pdf';
+    link.download = 'Фреймворк для определения типа тестирования.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    const today = new Date();
+    localStorage.setItem('frameworkDownloadDate', today.toISOString());
+    setDownloadDateObj(today);
+    setDownloadDate(today.toLocaleDateString('ru-RU', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    }));
+  };
+
+  const showUpdateMessage = downloadDateObj && lastUpdated > downloadDateObj;
+
   return (
     <>
 
@@ -437,7 +481,22 @@ export const Landing = () => {
         <Section sublevel={1}>
           <Bento>
 
-            <Bento.Item className={Styles.third_bento_framework}>
+            <Bento.Item clickable className={Styles.third_bento_framework} onClick={handleDownload}>
+              <Bento.Header headingSize={3} inverted iconName='download' className={Styles.third_bento_framework_header}>
+                Как правильно выбрать <span className={CommonStyles.nowrap}>UX-тестирование?</span>
+              </Bento.Header>
+
+              <Bento.Section className={classNames(CommonStyles.muted, CommonStyles.inverted)}>
+                <div>Фреймворк (алгоритм) выбора типа тестирования<br /><br />
+                  {showUpdateMessage && <><span>Скачайте обновление!</span><br /></>}
+                  Последнее обновление {lastUpdatedDate}<br />
+                  {downloadDate ? `Вы скачивали ${downloadDate}` : 'Вы ещё не скачивали'}</div>
+              </Bento.Section>
+
+              <img src="/images/others/Framework.png" alt="Framework" className={Styles.third_bento_framework_image} />
+            </Bento.Item>
+
+            {/* <Bento.Item className={Styles.third_bento_framework}>
               <Bento.Header headingSize={4}>
                 Как правильно выбрать тестирование?
               </Bento.Header>
@@ -445,7 +504,7 @@ export const Landing = () => {
               <Bento.Section className={CommonStyles.muted}>
                 <div>Фреймворк (алгоритм) выбора типа тестирования. Вы можете предложить свои правки. Последнее обновление 15.09.2025</div>
               </Bento.Section>
-            </Bento.Item>
+            </Bento.Item> */}
 
             {/* <Bento.Item className={Styles.third_bento_ux_roadmap}>
               <Bento.Header headingSize={4}>

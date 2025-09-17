@@ -2,16 +2,16 @@
   --color_text-accent_high--enabled: hsl(211, 100%, 50%);
   --color_text-accent_high--hovered: hsl(211, 100%, 35%);
   --color_text-accent_default--enabled: hsl(0, 0%, 8%);
+  --color_text-accent_default-inverted--enabled: hsl(0, 0%, 98%);
   // --color_text_muted-accent_default--enabled: hsla(0, 0%, 0%, 0.4);
   --color_text_muted-accent_default--enabled: hsl(239.97deg 1% 46.34%);
+  --color_text_muted-accent_default--inverted--enabled: hsl(0, 0%, 60%);
 
   --color_text-accent_high--enabled--invert: hsla(202, 100%, 82%, 0.97);
   --color_text-accent_high--hovered--invert: hsla(283, 100%, 86%, 0.97);
 
   --color_text-accent_default--enabled--invert: hsla(0, 0%, 99%, 0.97);
-  --color_text-accent_default--hovered--invert: var(
-    --color_text-accent_high--hovered--invert
-  );
+  --color_text-accent_default--hovered--invert: var(--color_text-accent_high--hovered--invert);
 
   // --bg-color-alpha-body: hsl(33, 10%, 82%);
   --bg-color-alpha-body: hsla(0, 0%, 39.22%, 0.11);
@@ -20,22 +20,12 @@
   --bg-color-solid-darker-body: hsl(0deg 0% 87.06%);
   --bg-read-color-body: white;
 
-  --bg_color-accent_default-backface_light-alpha--enabled: var(
-    --bg-color-alpha-body
-  );
-  --bg_color-accent_default-backface_light-solid--enabled: var(
-    --bg-color-solid-body
-  );
-  --bg_color-accent_default-backface_light-alpha--hovered: var(
-    --bg-color-alpha-darker-body
-  );
-  --bg_color-accent_default-backface_light-solid--hovered: var(
-    --bg-color-solid-darker-body
-  );
+  --bg_color-accent_default-backface_light-alpha--enabled: var(--bg-color-alpha-body);
+  --bg_color-accent_default-backface_light-solid--enabled: var(--bg-color-solid-body);
+  --bg_color-accent_default-backface_light-alpha--hovered: var(--bg-color-alpha-darker-body);
+  --bg_color-accent_default-backface_light-solid--hovered: var(--bg-color-solid-darker-body);
 
-  --bg_color-accent_default-backface_empty-solid--enabled: var(
-    --bg-color-solid-body
-  );
+  --bg_color-accent_default-backface_empty-solid--enabled: var(--bg-color-solid-body);
 
   --border_color-accent_default--enabled: hsla(0, 0%, 16.08%, 0.21);
 }

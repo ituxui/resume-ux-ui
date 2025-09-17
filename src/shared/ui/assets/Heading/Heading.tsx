@@ -10,6 +10,7 @@ type HeadingProps = {
   kind?: 'thin' | 'default' | 'bold';
   className?: string; // Добавляем возможность передавать дополнительные классы
   muted?: boolean;
+  inverted?: boolean;
 } & React.HTMLAttributes<HTMLHeadingElement>
 
 export const Heading: React.FC<HeadingProps> = ({
@@ -18,6 +19,7 @@ export const Heading: React.FC<HeadingProps> = ({
   kind = 'default',
   muted,
   className,
+  inverted = false,
   ...props }) => {
   const actualSize = size === 0 ? 1 : size;
   const HeadingTag = `h${actualSize}` as keyof React.JSX.IntrinsicElements;
@@ -30,7 +32,9 @@ export const Heading: React.FC<HeadingProps> = ({
         styles.heading,
         styles[`size-${size}`],
         styles[`kind-${kind}`],
+        styles[`kind-${kind}`],
         muted && CommonStyles.muted,
+        inverted && CommonStyles.inverted,
         className
       ),
     },
