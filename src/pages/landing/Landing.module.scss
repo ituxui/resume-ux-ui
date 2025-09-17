@@ -347,17 +347,18 @@ $secondBentoAreas: programms ai education courses soft_skills books media techno
     background-image: linear-gradient(to right, #050706, #344561);
     overflow: hidden;
 
-    padding: 32px;
+    $padding: 32px;
+    padding: #{$padding};
 
     &_header {
       padding-bottom: 16px;
     }
 
     &_image {
-      max-width: calc(100% + 64px);
-      margin-bottom: -32px;
+      max-width: calc(100% + #{$padding} + #{$padding});
+      margin-bottom: -#{$padding};
       align-self: flex-end;
-      margin-right: -32px;
+      margin-right: -#{$padding};
       max-height: 300px;
     }
   }
