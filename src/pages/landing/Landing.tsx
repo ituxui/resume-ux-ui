@@ -172,7 +172,7 @@ export const Landing = () => {
 
       <Section>
         <Section sublevel={1}>
-          <Badge inverted showIcon={false} text={'Кликните, чтобы не пропустить информацию'} />
+          <Badge inverted showIcon={false} text={'Кликните, чтобы открыть бенто'} />
         </Section>
         <Heading size={2} className={classNames(Styles.heading)}>
           Дополнительно обо мне
