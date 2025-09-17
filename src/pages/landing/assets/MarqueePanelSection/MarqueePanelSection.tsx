@@ -4,7 +4,7 @@ import { memo, useEffect, useMemo, useState } from "react";
 
 const getValuesBasedOnWidth = () => {
   if (window.innerWidth < 840) {
-    return [10, 5];
+    return [8, 3, 12];
   }
   return [8, 3, 12];
 };
