@@ -220,14 +220,16 @@ export const Landing = () => {
 
           {/* <ItSphereTable /> */}
 
-          <Heading muted size={4} kind='thin' className={classNames(Styles.heading)}>
-            Выставлено ограниченное количество проектов из-за NDA.
-          </Heading>
         </Section>
         <Section sublevel={1}>
           <Timeline data={listOfCompletedProjects} />
 
 
+          <Section sublevel={1}>
+            <Heading muted size={4} kind='thin' className={classNames(Styles.heading)}>
+              Выставлено ограниченное количество проектов из-за NDA.
+            </Heading>
+          </Section>
         </Section>
       </Section>
 
