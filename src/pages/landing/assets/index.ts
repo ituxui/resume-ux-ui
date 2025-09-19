@@ -1,3 +1,5 @@
+export { ItSphereTable } from "./ItSphereTable/ItSphereTable";
+
 export { PreloadImages } from "./PreloadImages/PreloadImages";
 
 export { WorkDuration } from "./WorkDuration";
@@ -17,4 +19,3 @@ export { MoscowClock } from "./MoscowClock/MoscowClock";
 export { MoscowTimeDifference } from "./MoscowTimeDifference/MoscowTimeDifference";
 export { TimezoneComparison } from "./TimezoneComparison/TimezoneComparison";
 export { VladivostokClock } from "./VladivostokClock/VladivostokClock";
-

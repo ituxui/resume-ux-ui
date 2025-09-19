@@ -8,7 +8,7 @@ import CommonStyles from '@commonStyles/CommonStyles.module.scss'
 import { Badge, } from '@shared/ui';
 import {
   AgeDisplay,
-  BirthdayCountdown, MarqueePanelSection, MediaSvg, MoscowTimeDifference, PreloadImages, TimezoneComparison, VladivostokClock,
+  BirthdayCountdown, ItSphereTable, MarqueePanelSection, MediaSvg, MoscowTimeDifference, PreloadImages, TimezoneComparison, VladivostokClock,
   WorkDuration
 } from './assets';
 import {
@@ -189,6 +189,18 @@ export const Landing = () => {
         </Bento>
       </Section>
 
+      <Section>
+        <Section sublevel={2}>
+          <Badge inverted showIcon={false} text={'Опыт'} />
+        </Section>
+        <Heading size={2} className={classNames(Styles.heading)}>
+          В каких сферах разрабатывал?
+        </Heading>
+        <Section sublevel={2}>
+          <ItSphereTable />
+        </Section>
+      </Section>
+
 
       <Section>
         <Section sublevel={2}>
@@ -199,9 +211,15 @@ export const Landing = () => {
         </Heading>
 
         <Section sublevel={2}>
-          <Heading muted size={4} kind='thin' className={classNames(Styles.heading)}>
+          {/* <Heading muted size={4} kind='thin' className={classNames(Styles.heading)}>
+            Имею опыт в следующих сферах
+          </Heading> */}
+          {/* <Heading muted size={4} kind='thin' className={classNames(Styles.heading)}>
             Разрабатывал интерфейсы приложений кибербезопасности (rdp protocol), образовательных платформ, строительных компаний, терминалов сбора данных промышленных предприятий, международного оператора доставки грузов, закрытых систем для управляющих жилыми домами компаний со встроенным умным домом, систем видеонаблюдения с искуственным интеллектом, сервиса заказов товара из Китая, системы учёта пассажиров для аэропорта, лендингов, информационных сайтов.
-          </Heading>
+          </Heading> */}
+
+          {/* <ItSphereTable /> */}
+
           <Heading muted size={4} kind='thin' className={classNames(Styles.heading)}>
             Выставлено ограниченное количество проектов из-за NDA.
           </Heading>

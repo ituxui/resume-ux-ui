@@ -1,0 +1,173 @@
+.wrapper {
+  overflow-x: auto;
+  margin: 24px 0;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(6px);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+  min-width: 600px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.headerCell {
+  background-color: rgb(20, 20, 20);
+  padding: 20px 24px;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  border: none;
+  font-size: 1.05em;
+
+  &:first-child {
+    width: 40%;
+    border-top-left-radius: 24px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 24px;
+  }
+}
+
+.row {
+  border-bottom: 1px solid #e8e8e8;
+
+  &:last-child {
+    border-bottom: none;
+
+    .cell:first-child {
+      border-bottom-left-radius: 24px;
+    }
+
+    .cell:last-child {
+      border-bottom-right-radius: 24px;
+    }
+  }
+
+  &:hover {
+    background-color: rgba(245, 245, 245, 0.7);
+  }
+}
+
+.cell {
+  padding: 18px 24px;
+  vertical-align: top;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  &:first-child {
+    border-left: 1px solid transparent;
+  }
+
+  &:last-child {
+    border-right: 1px solid transparent;
+  }
+}
+
+.sphereContent {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mainSphere {
+  font-weight: 500;
+  color: #222;
+  font-size: 1.05em;
+}
+
+.keywords {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 20px 0;
+    border-radius: 20px;
+  }
+
+  .headerCell,
+  .cell {
+    padding: 16px 20px;
+  }
+
+  .headerCell:first-child {
+    border-top-left-radius: 20px;
+  }
+
+  .headerCell:last-child {
+    border-top-right-radius: 20px;
+  }
+
+  .row:last-child {
+    .cell:first-child {
+      border-bottom-left-radius: 20px;
+    }
+
+    .cell:last-child {
+      border-bottom-right-radius: 20px;
+    }
+  }
+
+  .mainSphere {
+    font-size: 1em;
+  }
+
+  .keywords {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    border-radius: 18px;
+    margin: 16px 0;
+  }
+
+  .headerCell,
+  .cell {
+    padding: 14px 16px;
+  }
+
+  .headerCell:first-child {
+    border-top-left-radius: 18px;
+  }
+
+  .headerCell:last-child {
+    border-top-right-radius: 18px;
+  }
+
+  .row:last-child {
+    .cell:first-child {
+      border-bottom-left-radius: 18px;
+    }
+
+    .cell:last-child {
+      border-bottom-right-radius: 18px;
+    }
+  }
+
+  .table {
+    min-width: 100%;
+  }
+
+  .headerCell {
+    font-size: 0.95em;
+  }
+
+  .mainSphere {
+    font-size: 0.95em;
+  }
+
+  .keywords {
+    font-size: 0.8em;
+  }
+}
