@@ -194,7 +194,7 @@ export const Landing = () => {
           <Badge inverted showIcon={false} text={'Опыт'} />
         </Section>
         <Heading size={2} className={classNames(Styles.heading)}>
-          В каких сферах разрабатывал
+          Разрабатывал в следующих сферах
         </Heading>
         <Section sublevel={2}>
           <ItSphereTable />
