@@ -85,7 +85,7 @@ export const Landing = () => {
         </div>
 
         <Heading size={3} kind='thin' className={classNames(Styles.description, CommonStyles.muted)}>
-          UX UI дизайнер с профессиональным опытом <em><WorkDuration /></em> и <em className={CommonStyles.nowrap}>T-shaped</em> знаниями фулстек программирования. Реализовал 9 многостраничных приложений. <em>Ищу удалённую позицию</em> в продуктовой компании, использующую лучшие практики, чтобы применить и углубить экспертизу.<br />Давайте поговорим о Вашем продукте!
+          UX UI дизайнер с профессиональным опытом <em><WorkDuration /></em> и <em className={CommonStyles.nowrap}>T-shaped</em> знаниями фулстек программирования. Реализовал 10+ многостраничных приложений. <em>Ищу удалённую позицию</em> в продуктовой компании, использующую лучшие практики, чтобы применить и углубить экспертизу.<br />Давайте поговорим о Вашем продукте!
         </Heading>
 
         <div className={Styles.avaContainer}>
