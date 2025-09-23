@@ -107,7 +107,7 @@ export const Landing = () => {
             />
           </Tilt> */}
           {/* <img src='images/me/1757918111.jpg' alt="я" className={Styles.ava} /> */}
-          <img src='images/me/1919544.png' alt="я" className={Styles.ava} />
+          <img src='images/brand/me/1919544.png' alt="я" className={Styles.ava} />
         </div>
       </Section>
 

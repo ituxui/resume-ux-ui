@@ -34,6 +34,10 @@ export const PreloadImages: React.FC = () => {
       <img src="/images/brand/ai/windsurf.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/autohotkey.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/blender.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
+      <img src="/images/brand/books/Designing Virtual Worlds.jpg" alt="" className={styles.hiddenKeepSpace} draggable={false} />
+      <img src="/images/brand/books/roadmap.sh.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
+      <img src="/images/brand/books/Дизайн привычных вещей.jpg" alt="" className={styles.hiddenKeepSpace} draggable={false} />
+      <img src="/images/brand/books/На крючке.jpg" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/clickup.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/clockify.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/drawio.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
@@ -42,6 +46,9 @@ export const PreloadImages: React.FC = () => {
       <img src="/images/brand/figma.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/focustodo.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/keymanager.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
+      <img src="/images/brand/me/1919544.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
+      <img src="/images/brand/me/1919544f.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
+      <img src="/images/brand/me/1922490_1.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/media/4zB0K6XPc26tRaz15z0FfbzPxE.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/media/alexeybychkov_.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/media/awwwards.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
