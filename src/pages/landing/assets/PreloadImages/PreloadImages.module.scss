@@ -1,0 +1,26 @@
+.preloadWrapper {
+  /* Оставляем в потоке (не display:none), но скрываем от взаимодействия и от визуального отображения */
+  /* aria-hidden и role в компоненте помогают семантике */
+}
+
+/* Вариант 1 — остаётся в потоке и занимает исходное место (visibility:hidden) */
+.hiddenKeepSpace {
+  visibility: hidden; /* элемент остаётся в потоке и браузер загрузит ресурс */
+  pointer-events: none; /* нельзя кликнуть */
+  user-select: none; /* нельзя выделить */
+  -webkit-user-drag: none;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Вариант 2 — остаётся в потоке, но не занимает заметного места (ширина/высота 0) */
+.hiddenNoSpace {
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
