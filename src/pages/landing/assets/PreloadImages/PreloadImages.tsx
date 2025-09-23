@@ -47,8 +47,6 @@ export const PreloadImages: React.FC = () => {
       <img src="/images/brand/focustodo.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/keymanager.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/me/1919544.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
-      <img src="/images/brand/me/1919544f.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
-      <img src="/images/brand/me/1922490_1.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/media/4zB0K6XPc26tRaz15z0FfbzPxE.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/media/alexeybychkov_.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />
       <img src="/images/brand/media/awwwards.png" alt="" className={styles.hiddenKeepSpace} draggable={false} />

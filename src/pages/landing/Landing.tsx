@@ -476,7 +476,7 @@ export const Landing = () => {
                 Сборники и книги
               </Bento.Header>
               <Bento.Section className={Styles.second_bento_books_section}>
-                <FeatureLargeImageCard iconSrc='images/books/На крючке.jpg' title='Hooked. На крючке. Как создавать продукты, формирующие привычки' />
+                <FeatureLargeImageCard iconSrc='images/brand/books/На крючке.jpg' title='Hooked. На крючке. Как создавать продукты, формирующие привычки' />
               </Bento.Section>
               <div className={Styles.second_bento_books_bottom}>
                 <div className={Styles.second_bento_books_bottom_button}>
