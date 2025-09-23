@@ -36,14 +36,15 @@ const images = getImageFiles(baseDir);
 
 // Generate TSX content
 let tsxContent = `import React from 'react';
+import styles from './PreloadImages.module.scss';
 
 export const PreloadImages: React.FC = () => {
   return (
-    <div style={{ display: 'none' }}>
+    <div className={styles.preloadWrapper} aria-hidden="true" role="presentation">
 `;
 
 images.forEach((img) => {
-  tsxContent += `      <img src="/images/brand/${img}" alt="" />\n`;
+  tsxContent += `      <img src="/images/brand/${img}" alt="" className={styles.hiddenKeepSpace} draggable={false} />\n`;
 });
 
 tsxContent += `    </div>
